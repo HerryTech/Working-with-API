@@ -27,7 +27,20 @@ data = [{
     "opacity" : 0.6
 }]
 
-my_layout = {"title" : "Python Projects on GitHub", "xaxis" : {"title" : "Repository"}, "yaxis" : {"title": "Rank"}}
+my_layout = {
+    "title" : "Python Projects on GitHub",
+    "titlefont" : {"size": 28},
+    "xaxis" : {
+        "title" : "Repository",
+        "titlefont" : {"size": 24},
+        "tickfont": {"size": 14},
+        }, 
+    "yaxis" : {
+        "title": "Rank",
+        "titlefont" : {"size": 24},
+        "tickfont": {"size": 14},
+        }
+    }
 
 fig = {"data" : data, "layout" : my_layout}
 offline.plot(fig, filename = "python_respos.html" )
