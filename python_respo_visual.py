@@ -19,10 +19,15 @@ for repo_dict in repo_dicts:
 data = [{
     "type" : "bar",
     "x" : repo_names,
-    "y" : stars
+    "y" : stars,
+    "marker" : {
+        "color" : 'rgb(60, 100, 150)',
+        "line" :  {'width': 1.5, 'color': 'rgb(25, 25, 25)'}
+    },
+    "opacity" : 0.6
 }]
 
-my_layout = {"title" : "Python Repositories", "xaxis" : {"title" : "Repository"}, "yaxis" : {"title": "Rank"}}
+my_layout = {"title" : "Python Projects on GitHub", "xaxis" : {"title" : "Repository"}, "yaxis" : {"title": "Rank"}}
 
 fig = {"data" : data, "layout" : my_layout}
 offline.plot(fig, filename = "python_respos.html" )
